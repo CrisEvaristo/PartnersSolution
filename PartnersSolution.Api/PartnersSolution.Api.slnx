@@ -1,6 +1,0 @@
-<Solution>
-  <Project Path="../PartnersSolution.Application/PartnersSolution.Application.csproj" />
-  <Project Path="../PartnersSolution.Domain/PartnersSolution.Domain.csproj" />
-  <Project Path="../PartnersSolution.Infrastructure/PartnersSolution.Infrastructure.csproj" />
-  <Project Path="PartnersSolution.Api.csproj" />
-</Solution>

@@ -1,4 +1,4 @@
-namespace PartnersSolution.Api
+namespace Partners.Api
 {
     public class WeatherForecast
     {
