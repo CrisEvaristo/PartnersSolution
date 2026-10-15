@@ -1,6 +1,42 @@
-@Partners.Api_HostAddress = http://localhost:5120
+@baseUrl = http://localhost:5120
 
-GET {{Partners.Api_HostAddress}}/weatherforecast/
+### Criar entidade
+# @name createPartner
+POST {{baseUrl}}/api/partners
+Content-Type: application/json
+
+{
+	"name": "Nova Empresa",
+	"taxNumber": "987.654.321",
+	"type": "BOTH",
+	"email": "contacto@example.test",
+	"creditLimit": 2500.00
+}
+
+### Obter entidade criada
+@partnerId = {{createPartner.response.body.$.id}}
+@version = {{createPartner.response.body.$.version}}
+GET {{baseUrl}}/api/partners/{{partnerId}}
 Accept: application/json
 
-###
+### Listar entidades por nome ou NIF
+GET {{baseUrl}}/api/partners?Search=Empresa&IncludeInactive=false&Page=1&PageSize=20
+Accept: application/json
+
+### Atualizar entidade
+PUT {{baseUrl}}/api/partners/{{partnerId}}
+Content-Type: application/json
+
+{
+	"name": "Nova Empresa Atualizada",
+	"taxNumber": "987 654 321",
+	"type": "BOTH",
+	"email": null,
+	"creditLimit": 3000.00,
+	"isActive": true,
+	"version": "{{version}}"
+}
+
+### GET de Id inexistente (404)
+GET {{baseUrl}}/api/partners/00000000-0000-0000-0000-000000000000
+Accept: application/json

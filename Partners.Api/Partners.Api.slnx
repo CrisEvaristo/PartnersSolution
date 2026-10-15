@@ -2,5 +2,6 @@
   <Project Path="../Partners.Application/Partners.Application.csproj" Id="fe5a2154-7401-4cbd-ab0f-19a442eb3ec6" />
   <Project Path="../Partners.Domain/Partners.Domain.csproj" Id="b545d4dd-e0a1-4d69-9b68-40920b640636" />
   <Project Path="../Partners.Infrastructure/Partners.Infrastructure.csproj" Id="2b7ed4fb-fe49-403c-ab29-c7e12147f87f" />
+  <Project Path="../Partners.Tests/Partners.Tests.csproj" />
   <Project Path="Partners.Api.csproj" />
 </Solution>
